@@ -1,12 +1,12 @@
 #pragma once
 
 #ifdef HZ_PLATFORM_WINDOWS
-extern Hazel::HazelApplication* Hazel::CreateApplication();
+extern Hazel::Application* Hazel::CreateApplication();
 int main(int argc, char** argv)
 {
-	Sandbox* sandbox = new Sandbox();
-	sandbox->Run();
-	delete sandbox;
+	auto app = Hazel::CreateApplication();
+	app->Run();
+	delete app;
 }
 
 #endif

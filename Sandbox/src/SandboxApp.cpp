@@ -12,13 +12,7 @@ public:
 
 	}
 };
-int main()
-{
-	Sandbox* sandbox = new Sandbox();
-	sandbox->Run();
-	delete sandbox;
-}
-Hazel::Application* CreateApplication()
+Hazel::Application* Hazel::CreateApplication()
 {
 	return new Sandbox();
 }
